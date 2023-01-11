@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("bg1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#overlay {
+    background-color: rgb(26, 25, 25);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.name-title {
+    font-size: 1.5rem;
+    margin: 0.7rem;
+    font-family: 'Anton', sans-serif;
+    color: rgba(30, 47, 54, 255);
+    background-color: rgba(120, 149, 161, 255);
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-list {
+    display: flex;
+    position: fixed;
+    top: 1rem;
+    right: -75%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(120, 149, 161, 0.479);
+    transition: right 1s;
+}
+
+.navbar-list.active {
+    right: 0;
+}
+
+.navbar-list li {
+    list-style: none;
+    /* transition: border 0.5s ease;  */
+}
+
+.navbar-list li.active {
+    border-bottom: 3px solid rgba(30, 47, 54, 255);
+    background-color: rgba(120, 149, 161, 0.295);
+}
+
+.navbar-list li a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    color: rgba(30, 47, 54, 255);
+    font-family: 'Anton', sans-serif;
+}
+
+.navbar-list li:hover a {
+    background-color: rgba(30, 47, 54, 255);
+    color: rgb(196, 219, 240);
+    border-bottom-width: 0px;
+    transition: 0.7s;
+
+}
+
+#sec-container {
+    height: 35em;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 10em;
+}
+
+.header-text {
+    font-family: 'Anton', sans-serif;
+    color: rgba(30, 47, 54, 255);
+}
+
+
+#home {
+    position: relative;
+    top: 50%;
+    border-top: 3px solid rgba(30, 47, 54, 255);
+    border-bottom: 3px solid rgba(30, 47, 54, 255);
+    text-align: justify;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(211, 212, 206, 0.911);
+    width: 100%;
+    height: 100%;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    transform: translateY(-50%);
+}
+
+#about {
+    position: relative;
+    top: 50%;
+    border-top: 3px solid rgba(30, 47, 54, 255);
+    border-bottom: 3px solid rgba(30, 47, 54, 255);
+    text-align: justify;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(201, 202, 197, 0.911);
+    width: 100%;
+    height: 0px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    display: none;
+    transform: translateY(-50%);
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#about a{
+    text-decoration: none;
+    color: rgb(10, 129, 158);
+    padding: 2px;
+    border-radius: 10%;
+}
+
+#about a:hover, :visited{
+    background-color: rgba(30, 47, 54, 0.418);
+    transition: background-color 0.4s;
+}
+
+
+#contact {
+    width: 100%;
+    position: relative;
+    top: 50%;
+    border-top: 3px solid rgba(30, 47, 54, 255);
+    border-bottom: 3px solid rgba(30, 47, 54, 255);
+    text-align: justify;
+    font-size: 16px;
+    line-height: 150%;
+    background-color: rgba(196, 197, 192, 0.911);
+    /* background-color: rgb(54, 53, 61); */
+    width: 100%;
+    height: 0px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    display: none;
+    transform: translateY(-50%);
+}
+
+#contact form {
+    text-align: left;
+    color: rgb(30, 47, 54);
+    width: 100%;
+}
+
+#contact form label{
+    margin-left: 15px;
+}
+
+.form-input-boxes {
+    width: 100%;
+    height: 35px;
+    background-image: linear-gradient(to right, rgb(196, 197, 192), rgb(156, 156, 153));
+    outline: none;
+    border: none;
+    padding-left: 15px;
+    border-bottom: 3px solid rgba(30, 47, 54, 0.623);
+    border-top: 3px solid rgba(30, 47, 54, 0.623);
+    /* Change this */
+    color: rgb(30, 47, 54);
+}
+
+input{
+    font-weight: bold;
+}
+
+#message{
+    width: 100%;
+    height: 90px;
+    background-image: linear-gradient(to right, rgb(196, 197, 192), rgb(156, 156, 153));
+    outline: none;
+    border: none;
+    padding: 15px;
+    border-bottom: 3px solid rgba(30, 47, 54, 0.623);
+    border-top: 3px solid rgba(30, 47, 54, 0.623);
+    /* Change this */
+    color: rgb(30, 47, 54);
+    resize: none;
+}
+
+
+#submit-btn {
+    margin-top: 15px;
+    margin-left: 15px;
+    background-color: transparent;
+    font-family: robo;
+    color: rgb(30, 47, 54);
+    padding: 5px 20px;
+    font-size: 15px;
+    border: 2px solid rgb(30, 47, 54);
+    border-radius: 10px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    background-color: rgb(30, 47, 54);
+    color: aliceblue;
+}
+
+.contact-info{
+    margin: 15px;
+}
+
+
+#projects {
+    position: relative;
+    top: 50%;
+    border-top: 3px solid rgba(30, 47, 54, 255);
+    border-bottom: 3px solid rgba(30, 47, 54, 255);
+    text-align: justify;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgba(196, 197, 192, 0.911);
+    width: 100%;
+    height: 0px;
+    font-family: 'Slabo 27px', serif;
+    font-weight: bold;
+    display: none;
+    transform: translateY(-50%);
+}
+
+#projects a{
+    text-decoration: none;
+    color: rgb(10, 129, 158);
+    padding: 2px;
+    border-radius: 10%;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .hamburger-menu {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        cursor: pointer;
+        padding: 1rem;
+        z-index: 999;
+    }
+
+    .ham-bar {
+        width: 70%;
+        height: 4px;
+        background-color: rgba(30, 47, 54, 255);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform .6s, opacity .3s, top .6s;
+    }
+
+    .bar-top {
+        top: 25%;
+    }
+
+    .bar-bottom {
+        top: 75%;
+    }
+
+    .hamburger-menu.active .bar-top {
+        transform: translate(-50%, -50%) rotate(-315deg);
+        top: 50%;
+    }
+
+    .hamburger-menu.active .bar-mid {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar-bottom {
+        transform: translate(-50%, -50%) rotate(-225deg);
+        top: 50%;
+    }
+
+    .hidder {
+        width: 10%;
+    }
+
+    .offscreen-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background-color: rgba(30, 47, 54, 0.514);
+        height: 100%;
+        width: 40%;
+        transition: right .8s;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 60px;
+        background-color: transparent;
+    }
+
+    .navbar-list li {
+        margin: 0.5rem;
+        background-color: rgb(120, 149, 161);
+    }
+
+    .offscreen-menu.active {
+        right: 0;
+    }
+
+
+    .navbar-list li.active {
+        border: 3px solid rgba(30, 47, 54, 255);
+        background-color: rgb(120, 149, 161);
+    }
+}
+
+/* CEll PHONES */
+@media only screen and (max-width: 576px) {
+    .offscreen-menu {
+        right: -100%;
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #home{
+        font-size: 1.15rem;
+    }
+    #about{
+        font-size: 1.15rem;
+    }
+
+    #projects{
+        font-size: 1.15rem;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+    #home{
+        font-size: 1.15rem;
+    }
+    #about{
+        font-size: 1.15rem;
+    }
+
+    #projects{
+        font-size: 1.15rem;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    
+
+    #home{
+        font-size: 1.15rem;
+    }
+
+    #about{
+        font-size: 1.15rem;
+    }
+
+    #projects{
+        font-size: 1.15rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #sec-container{
+        height: 30em;
+    }
+
+    #home{
+        font-size: 1.25rem;
+    }
+    #about{
+        font-size: 1.25rem;
+    }
+
+    #projects{
+        font-size: 1.25rem;
+    }
+
+}

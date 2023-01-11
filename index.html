@@ -1,0 +1,133 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+
+    <!-- Anton Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- Slabo Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+
+
+    <title>
+        Personal Blog!
+    </title>
+</head>
+
+<body>
+    <div id="overlay"></div>
+    <nav class="navbar">
+        <div class="name-title">AMG</div>
+        <nav>
+            <div class="hamburger-menu">
+                <div class="ham-bar bar-top"></div>
+                <div class="ham-bar bar-mid"></div>
+                <div class="ham-bar bar-bottom"></div>
+            </div>
+        </nav>
+        <div class="navbar-links offscreen-menu">
+            <ul class="navbar-list">
+                <li class="home"><a href="#">Home</a></li>
+                <li class="about"><a href="#">About</a></li>
+                <li class="contact"><a href="#">Contact</a></li>
+                <li class="projects"><a href="#">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="sec-container">
+        <!-- <div class="hidder"></div> -->
+        <section id="home">
+            <br>
+            <h1 class="header-text">Welcome to my personal website!</h1><br>
+            Hi!
+            <br><br>
+            My name is Amirali Malekghasemi. Welcome to my website. I made this website with the sole purpose of introducing myself to whomever
+            is intrested.
+            This website was fully made and developed by myself just to showcase a little bit of my
+            web developing skills.
+            <br>
+            <br>
+            You can navigate through this website to learn more about me and what I have done. Make sure to contact me
+            using the "Contact" section with any questions or anything I can help you with.
+        </section>
+
+        <section id="about">
+            <br>
+            <h1 class="header-text">About Me</h1>
+            Well, as mentioned before my name is Amirali. Everyone calls me Amir for, well for simplicity.
+            I am currently a 2nd year Computer Science student at Toronto Metropolitan University 
+            (formerly know as Ryerson Universty).
+            <br>
+            I haven't had any experience working in a tech company yet which I am working on to change very soon.
+            I know varaity of programming languages like Python/Tkinter, C++/C, Java, HTML/CSS/Javascript/PHP, LISP, Bash 
+            and many some others that I worked with here and there. I do however believe that learning a language or as of
+            that matter knowing it is not the most important part. I belive critical thinking and problem solving skills are
+            of the most important essence. I like to think of myself as a very strong individual in these categories and I hope
+            my resume, projects and academic record are enough evidence.
+            <br><br>
+            You can click <a href="https://docs.google.com/document/d/1VPGjicJ9DpyOmppup0jYkwWWgeqULzyoRYSyqZyexO8/edit" target="_blank">here</a> to take a look at my resume or just contact me with any questions.
+        </section>
+
+        <section id="contact">
+            <br>
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+
+                <!-- Honeypot -->
+                <input type="hidden" name="_honey" style="display: none;">
+
+                <!-- Turn Captcha off -->
+                <input type="hidden" name="_captcha" value="false">
+
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" class="form-input-boxes" name="name" autocomplete="off"
+                    placeholder="E.g. John"><br>
+                <br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" class="form-input-boxes" name="email" autocomplete="off"
+                    placeholder="E.g. JohnCollins@email.com"><br>
+                <br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" placeholder="Write here..."></textarea><br>
+                <button id="submit-btn" type="submit">Send</button>
+            </form>
+
+            <div class="contact-info">
+                <h2 class="header-text">or</h2>
+                Email: Amiralimg@yahoo.com
+            </div>
+        </section>
+
+        <section id="projects">
+            <br>
+            <h1 class="header-text">Projects</h1><br><br>
+            I've done a lot of projects throught out my time. I will keep adding to the as well. I was going to add them to this website but I thought it would be simpler to link <a href="https://github.com/amiralimgh" target="_blank">my Github</a> page for you to visit.
+            <br>
+            As always contact me with any questions or problems. Thanks
+            <br>
+            <br>
+            <a href="https://github.com/amiralimgh" target="_blank"> Click here for my Github page</a>
+        </section>
+    </div>
+
+
+</body>
+
+</html>
