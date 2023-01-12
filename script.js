@@ -89,8 +89,8 @@ $(document).ready(function(){
             name: "FormSubmit",
             message: "I'm from Devro LABS"
         },
-        success: (data) => console.log("success"),
-        error: (err) => console.log("error")
+        success: (data) => console.log(data),
+        error: (err) => console.log(err)
     });
   });
 });
