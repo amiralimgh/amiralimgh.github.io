@@ -147,8 +147,8 @@ body {
 }
 
 #about a:hover, :visited{
-    background-color: rgba(30, 47, 54, 0.418);
-    transition: background-color 0.4s;
+    color: rgb(10, 129, 158);
+    cursor: pointer;
 }
 
 
