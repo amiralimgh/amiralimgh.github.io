@@ -42,10 +42,10 @@
         </nav>
         <div class="navbar-links offscreen-menu">
             <ul class="navbar-list">
-                <li class="home"><a href="#">Home</a></li>
-                <li class="about"><a href="#">About</a></li>
-                <li class="contact"><a href="#">Contact</a></li>
-                <li class="projects"><a href="#">Projects</a></li>
+                <li class="home"><a href="#home">Home</a></li>
+                <li class="about"><a href="#about">About</a></li>
+                <li class="contact"><a href="#contact">Contact</a></li>
+                <li class="projects"><a href="#projects">Projects</a></li>
             </ul>
         </div>
     </nav>
@@ -87,25 +87,24 @@
 
         <section id="contact">
             <br>
-            <form action="https://formsubmit.co/amiralimg@yahoo.com" method="POST">
+            <form action="https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c" method="POST">
 
                 <!-- Honeypot -->
-                <input type="hidden" name="_honey" style="display: none;">
+                <!-- <input type="hidden" name="_honey" style="display: none;"> -->
 
                 <!-- Turn Captcha off -->
-                <input type="hidden" name="_captcha" value="false">
-
+                <!-- <input type="hidden" name="_captcha" value="false"> -->
 
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" class="form-input-boxes" name="name" autocomplete="off"
-                    placeholder="E.g. John"><br>
+                    placeholder="E.g. John" required><br>
                 <br>
                 <label for="email">Email:</label><br>
                 <input type="text" id="email" class="form-input-boxes" name="email" autocomplete="off"
-                    placeholder="E.g. JohnCollins@email.com"><br>
+                    placeholder="E.g. JohnCollins@email.com" required><br>
                 <br>
                 <label for="message">Message:</label><br>
-                <textarea id="message" name="message" placeholder="Write here..."></textarea><br>
+                <textarea id="message" name="message" placeholder="Write here..." required></textarea><br>
                 <button id="submit-btn" type="submit">Send</button>
             </form>
 

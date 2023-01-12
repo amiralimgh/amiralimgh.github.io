@@ -358,6 +358,10 @@ input{
         right: -100%;
         width: 100%;
     }
+
+    #home, #about, #contact, #projects{
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -368,7 +372,6 @@ input{
     #about{
         font-size: 1.15rem;
     }
-
     #projects{
         font-size: 1.15rem;
     }
