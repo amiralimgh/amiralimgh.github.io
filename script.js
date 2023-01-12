@@ -62,7 +62,7 @@ $(".navbar-list li").click(function () {
 
 $.ajax({
   method: 'POST',
-  url: 'https://formsubmit.co/ajax/your@email.com',
+  url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
   dataType: 'json',
   accepts: 'application/json',
   data: {
