@@ -82,7 +82,7 @@ $(document).ready(function(){
 
       $.ajax({
         method: 'POST',
-        url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
+        url: 'https://formsubmit.co/amiralimg@yahoo.com',
         dataType: 'json',
         accepts: 'application/json',
         data: {
