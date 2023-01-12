@@ -4,13 +4,41 @@ const navbarList = document.querySelector('.navbar-list');
 const navbarLinks = navbarList.querySelectorAll('li');
 
 window.addEventListener('load', () => {
+
+  // Get the current URL
+  var currentUrl = window.location.href;
+
+  // Get the query string from the URL
+  var queryString = currentUrl.split('?')[1];
+
+  // Create an instance of URLSearchParams
+  var urlParams = new URLSearchParams(queryString);
+
+  // Get the value of a specific query string parameter
+  var success = urlParams.get('success');
+
   //Loading screen
   var div = $('#overlay');
-  // div.fadeOut(1300);
+  div.fadeOut(1300);
   div.fadeOut(0);
   //Navbar animation
   navbarList.classList.add('active');
   document.querySelector('.navbar-list li').classList.add('active');
+
+
+  if (success == "True") {
+    setTimeout(function () {
+      history.pushState("", document.title, window.location.pathname);
+    }, 500);
+
+    navbarLinks.forEach((link) => link.classList.remove('active'));
+    document.querySelector('.navbar-list li:nth-child(3)').classList.add('active');
+
+    $("#home").animate({ height: "0px" }, 500, function () {
+      $("#home").hide();
+      $("#contact").show().animate({ height: "100%" }, 500);
+    });
+  }
 
 
 });
@@ -22,6 +50,7 @@ hamMenu.addEventListener('click', () => {
 });
 
 
+//Activates navbar links
 navbarLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
     // Remove the active class from all links
@@ -30,18 +59,6 @@ navbarLinks.forEach((link) => {
     event.target.parentElement.classList.add('active');
   });
 });
-
-
-// document.querySelectorAll('.navbar-list li a').forEach(link => {
-//   link.addEventListener('click', e => {
-//     const className = e.target.parentElement.className;
-//     const selectedDiv = document.querySelector(`#${className.split('-')[0]}`);
-//     const otherDivs = document.querySelectorAll(`section:not(#${className.split('-')[0]})`);
-//     selectedDiv.style.display = 'block';
-//     otherDivs.forEach(div => div.style.display = 'none');
-//   });
-// });
-
 
 
 $(".navbar-list li").click(function () {
@@ -59,40 +76,3 @@ $(".navbar-list li").click(function () {
   });
 });
 
-
-$(document).ready(function () {
-  $("#myForm").submit(function (event) {
-    event.preventDefault();
-
-    var formData = {
-      name: $("#name").val(),
-      email: $("#email").val(),
-      message: $("#message").val()
-    };
-
-    // $.ajax({
-    //     method: 'POST',
-    //     url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
-    //     dataType: 'json',
-    //     accepts: 'application/json',
-    //     data: formData,
-    //     success: (data) => console.log("success"),
-    //     error: (err) => console.log("error")
-    // });
-
-    fetch("https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
-      body: JSON.stringify({
-        name: "FormSubmit",
-        message: "I'm from Devro LABS"
-      })
-    })
-      .then(response => response.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
-  });
-});
