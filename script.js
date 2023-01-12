@@ -70,14 +70,27 @@ $(document).ready(function(){
           message: $("#message").val()
       };
 
+      // $.ajax({
+      //     method: 'POST',
+      //     url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
+      //     dataType: 'json',
+      //     accepts: 'application/json',
+      //     data: formData,
+      //     success: (data) => console.log("success"),
+      //     error: (err) => console.log("error")
+      // });
+
       $.ajax({
-          method: 'POST',
-          url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
-          dataType: 'json',
-          accepts: 'application/json',
-          data: formData,
-          success: (data) => console.log(data),
-          error: (err) => console.log(err)
-      });
+        method: 'POST',
+        url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
+        dataType: 'json',
+        accepts: 'application/json',
+        data: {
+            name: "FormSubmit",
+            message: "I'm from Devro LABS"
+        },
+        success: (data) => console.log("success"),
+        error: (err) => console.log("error")
+    });
   });
 });
