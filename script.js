@@ -60,37 +60,39 @@ $(".navbar-list li").click(function () {
 });
 
 
-$(document).ready(function(){
-  $("#myForm").submit(function(event){
-      event.preventDefault();
+$(document).ready(function () {
+  $("#myForm").submit(function (event) {
+    event.preventDefault();
 
-      var formData = {
-          name: $("#name").val(),
-          email: $("#email").val(),
-          message: $("#message").val()
-      };
+    var formData = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      message: $("#message").val()
+    };
 
-      // $.ajax({
-      //     method: 'POST',
-      //     url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
-      //     dataType: 'json',
-      //     accepts: 'application/json',
-      //     data: formData,
-      //     success: (data) => console.log("success"),
-      //     error: (err) => console.log("error")
-      // });
+    // $.ajax({
+    //     method: 'POST',
+    //     url: 'https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c',
+    //     dataType: 'json',
+    //     accepts: 'application/json',
+    //     data: formData,
+    //     success: (data) => console.log("success"),
+    //     error: (err) => console.log("error")
+    // });
 
-      $.ajax({
-        method: 'POST',
-        url: 'https://formsubmit.co/amiralimg@yahoo.com',
-        dataType: 'json',
-        accepts: 'application/json',
-        data: {
-            name: "FormSubmit",
-            message: "I'm from Devro LABS"
-        },
-        success: (data) => console.log(data),
-        error: (err) => console.log(err)
-    });
+    fetch("https://formsubmit.co/b88cf1c56dd32e2515a9be585bc0a14c", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        name: "FormSubmit",
+        message: "I'm from Devro LABS"
+      })
+    })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error));
   });
 });
