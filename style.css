@@ -294,13 +294,13 @@ input {
     color: rgba(147, 203, 252, 0.801);
 }
 
-.fa-brands {
+.fa {
     padding: 20px;
     text-decoration: none;
     border-radius: 50%;
 }
 
-.fa-brands:hover {
+.fa:hover {
     opacity: 0.7;
 }
 
