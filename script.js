@@ -50,9 +50,13 @@ hamMenu.addEventListener('click', () => {
 });
 
 
+
+var clickEventActive = true;
+
 //Activates navbar links
 navbarLinks.forEach((link) => {
   link.addEventListener('click', (event) => {
+    if(!clickEventActive) return;
     // Remove the active class from all links
     navbarLinks.forEach((link) => link.classList.remove('active'));
     // Add the active class to the clicked link
@@ -60,8 +64,9 @@ navbarLinks.forEach((link) => {
   });
 });
 
-
 $(".navbar-list li").click(function () {
+  if(!clickEventActive) return;
+  clickEventActive = false;
   // Get the ID of the section to show
   var arr = $(this).attr("class");
   //Format the class name
@@ -72,7 +77,9 @@ $(".navbar-list li").click(function () {
   //Replace current section with the new one
   visibleDiv.animate({ height: "0px" }, 500, function () {
     $(visibleDiv).hide();
-    $("#" + divId).show().animate({ height: "100%" }, 500);
+    $("#" + divId).show().animate({ height: "100%" }, 500, function() {
+      clickEventActive = true;
+    });
   });
 });
 
